@@ -18,7 +18,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-
+import { skillsData } from "@/lib/data";
 import Link from "next/link";
 
 const words =
@@ -93,7 +93,7 @@ export default function Hero() {
           <div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="font-mono">Skill Stack</Button>
+                <Button className="font-mono z-[100]">Skill Stack</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -103,7 +103,15 @@ export default function Hero() {
                     developer
                   </DialogDescription>
                 </DialogHeader>
-                <div>Hello</div>
+                <div>
+                  <ul className="grid grid-cols-4">
+                    {skillsData.map((item) => (
+                      <li key={item} className="text-center gap-">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </DialogContent>
             </Dialog>
           </div>
@@ -120,7 +128,7 @@ export default function Hero() {
                     right now!
                   </DialogDescription>
                 </DialogHeader>
-                <div>Hello</div>
+                <div>Coming Soon! In the meantime, check out my Github.</div>
               </DialogContent>
             </Dialog>
           </div>
