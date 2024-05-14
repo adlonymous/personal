@@ -89,11 +89,11 @@ export default function Hero() {
             <IconBrandTelegram stroke={2} />
           </a>
         </p>
-        <div className="flex flex-row gap-4 items-center z-[150]">
+        <div className="flex flex-row gap-4 items-center z-[50]">
           <div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="font-mono z-[100]">Skill Stack</Button>
+                <Button className="font-mono z-[1000]">Skill Stack</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -118,7 +118,7 @@ export default function Hero() {
           <div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="font-mono">Project Showcase</Button>
+                <Button className="font-mono ">Project Showcase</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
