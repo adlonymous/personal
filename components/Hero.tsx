@@ -9,20 +9,11 @@ import XIcon from "@mui/icons-material/X";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { IconBrandTelegram } from "@tabler/icons-react";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { skillsData } from "@/lib/data";
+
 import Link from "next/link";
 
 const words =
-  "I'm an enterprising college sophomore on a gap year and a full stack engineer focusing on Web Development and Solana Blockchain Development. I'm passionate about building consumer applications and tools that enable everyone to utilize emerging technologies.";
+  "I'm an enterprising CS Sophomore at Rutgers University and a full stack engineer focusing on Web Development and Solana Blockchain Development. I like building cool stuff on the web and especially on the Solana blockchain. I also write articles and threads that focus on helping less experienced developers as well as technical-adjacent ecosystem enthusiasts know more about how the Solana blockchain works and what new technologies are being built on it.";
 
 export default function Hero() {
   return (
@@ -48,15 +39,14 @@ export default function Hero() {
             }}
             className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
           >
-            Hey there, I&apos;m{" "}
-            <Highlight className="text-black">Aadil</Highlight>
+            Hey there, I&apos;m <Highlight className="text-black">Aadil</Highlight>
             <br />
           </motion.h1>
         </HeroHighlight>
         <p className="font-mono text-md text-center ">
-          better known as adlonymous or mous(spelled moose) on the internet
+          better known as adlonymous or mous(pronounced moose) on the internet
         </p>
-        <h2 className="font-mono text-xl italic font-semibold">
+        <h2 className="font-mono text-xl text-center italic font-semibold">
           Developer @{" "}
           <a className="underline decoration-emerald-500 decoration-wavy decoration-2 underline-offset-2">
             MonkeDAO
@@ -67,76 +57,18 @@ export default function Hero() {
           </a>
         </h2>
         <p className="flex flex-row gap-4 items-center z-[50]">
-          <Link
-            href="https://twitter.com/adlonymous"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="https://twitter.com/adlonymous" target="_blank" rel="noopener noreferrer">
             <XIcon />
           </Link>
-          <a
-            href="https://github.com/adlonymous"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/adlonymous" target="_blank" rel="noopener noreferrer">
             <IconBrandGithub stroke={2} />
           </a>
-          <a
-            href="https://t.me/adlonymous"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://t.me/adlonymous" target="_blank" rel="noopener noreferrer">
             <IconBrandTelegram stroke={2} />
           </a>
         </p>
-        <div className="flex flex-row gap-4 items-center z-[50]">
-          <div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="font-mono z-[1000]">Skill Stack</Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>My Skill Stack</DialogTitle>
-                  <DialogDescription>
-                    Languages, Frameworks and Tools I know and use as a
-                    developer
-                  </DialogDescription>
-                </DialogHeader>
-                <div>
-                  <ul className="grid grid-cols-4">
-                    {skillsData.map((item) => (
-                      <li key={item} className="text-center gap-">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-          <div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="font-mono ">Project Showcase</Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>My Project Showcase</DialogTitle>
-                  <DialogDescription>
-                    Projects that I have worked on in the past and maybe even
-                    right now!
-                  </DialogDescription>
-                </DialogHeader>
-                <div>Coming Soon! In the meantime, check out my Github.</div>
-              </DialogContent>
-            </Dialog>
-          </div>
-        </div>
-        <TextGenerateEffect
-          words={words}
-          className="font-mono md:px-28 pt-12 text-justify"
-        />
+
+        <TextGenerateEffect words={words} className="font-mono md:px-28 pt-12 text-justify" />
       </div>
       <BackgroundBeams />
     </>
