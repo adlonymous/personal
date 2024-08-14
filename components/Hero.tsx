@@ -11,9 +11,10 @@ import { IconBrandTelegram } from "@tabler/icons-react";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 import Link from "next/link";
+import BlinkComp from "./BlinkComp";
 
 const words =
-  "I'm an enterprising CS Sophomore at Rutgers University and a full stack engineer focusing on Web Development and Solana Blockchain Development. I like building cool stuff on the web and especially on the Solana blockchain. I also write articles and threads that focus on helping less experienced developers as well as technical-adjacent ecosystem enthusiasts know more about how the Solana blockchain works and what new technologies are being built on it.";
+  "I'm a CS Sophomore at Rutgers University and a full stack engineer focusing on Web Development and Solana Blockchain Development. I like building cool stuff on the web and especially on the Solana blockchain. I also write articles and threads that focus on helping less experienced developers as well as technical-adjacent ecosystem enthusiasts know more about how the Solana blockchain works and what new technologies are being built on it.";
 
 export default function Hero() {
   return (
@@ -47,9 +48,9 @@ export default function Hero() {
           better known as adlonymous or mous(pronounced moose) on the internet
         </p>
         <h2 className="font-mono text-xl text-center italic font-semibold">
-          Developer @{" "}
+          DevRel Intern @{" "}
           <a className="underline decoration-emerald-500 decoration-wavy decoration-2 underline-offset-2">
-            MonkeDAO
+            Dialect
           </a>{" "}
           | Head of Growth @{" "}
           <a className="underline decoration-violet-500 decoration-wavy decoration-2 underline-offset-2">

@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import About from "@/components/About";
-
+import AppWalletProvider from "../components/AppWalletProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black text-white">
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <AppWalletProvider>
+          <Navbar />
+          {children}
+        </AppWalletProvider>
       </body>
     </html>
   );
