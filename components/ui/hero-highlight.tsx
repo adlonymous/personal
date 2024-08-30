@@ -15,11 +15,7 @@ export const HeroHighlight = ({
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  function handleMouseMove({
-    currentTarget,
-    clientX,
-    clientY,
-  }: React.MouseEvent<HTMLDivElement>) {
+  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent<HTMLDivElement>) {
     if (!currentTarget) return;
     let { left, top } = currentTarget.getBoundingClientRect();
 
@@ -78,7 +74,7 @@ export const Highlight = ({
       transition={{
         duration: 2,
         ease: "linear",
-        delay: 0.5,
+        delay: 0.05,
       }}
       style={{
         backgroundRepeat: "no-repeat",

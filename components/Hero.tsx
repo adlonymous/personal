@@ -48,9 +48,9 @@ export default function Hero() {
           better known as adlonymous or mous(pronounced moose) on the internet
         </p>
         <h2 className="font-mono text-xl text-center italic font-semibold">
-          DevRel Intern @{" "}
+          Dev @{" "}
           <a className="underline decoration-emerald-500 decoration-wavy decoration-2 underline-offset-2">
-            Dialect
+            MonkeDAO
           </a>{" "}
           | Head of Growth @{" "}
           <a className="underline decoration-violet-500 decoration-wavy decoration-2 underline-offset-2">
